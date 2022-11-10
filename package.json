@@ -1,0 +1,15 @@
+{
+  "name": "attempt-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "run-style": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.2.1"
+  }
+}
