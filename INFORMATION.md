@@ -1,0 +1,9 @@
+<h1>This is the Official Website for WMAC INDIA.</h1>
+
+<p>
+This is a private repository.
+</p>
+
+<ol>
+<li>Version 1.0.0 Uploaded on 10.11.2022</li>
+</ol>
