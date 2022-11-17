@@ -2,11 +2,7 @@
 module.exports = {
   content: ["./public/*.{html,js}"],
   theme: {
-    extend: {
-      fontFamily: {
-        pacifico: ['Pacifico', "cursive"]
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
