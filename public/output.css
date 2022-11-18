@@ -1334,14 +1334,6 @@ video {
   font-weight: 800;
 }
 
-.font-normal {
-  font-weight: 400;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -1515,17 +1507,9 @@ video {
   margin-right: 0.75rem;
 }
 
-.first-letter\:pb-11::first-letter {
-  padding-bottom: 2.75rem;
-}
-
 .first-letter\:text-7xl::first-letter {
   font-size: 4.5rem;
   line-height: 1;
-}
-
-.first-letter\:font-bold::first-letter {
-  font-weight: 700;
 }
 
 .first-letter\:font-extrabold::first-letter {
@@ -1535,14 +1519,6 @@ video {
 .first-letter\:text-gray-900::first-letter {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.first-line\:uppercase::first-line {
-  text-transform: uppercase;
-}
-
-.first-line\:tracking-widest::first-line {
-  letter-spacing: 0.1em;
 }
 
 .hover\:bg-gray-100:hover {
@@ -1728,11 +1704,6 @@ video {
 
   .dark\:decoration-blue-600 {
     text-decoration-color: #2563eb;
-  }
-
-  .dark\:first-letter\:text-gray-100::first-letter {
-    --tw-text-opacity: 1;
-    color: rgb(243 244 246 / var(--tw-text-opacity));
   }
 
   .dark\:hover\:bg-gray-700:hover {
