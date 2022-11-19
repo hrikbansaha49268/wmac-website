@@ -2159,6 +2159,11 @@ video {
     line-height: 2.5rem;
   }
 
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .lg\:font-extrabold {
     font-weight: 800;
   }
