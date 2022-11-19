@@ -1582,6 +1582,26 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.hover\:shadow-\[\#00d9c0\]:hover {
+  --tw-shadow-color: #00d9c0;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-\[\#466365\]:hover {
+  --tw-shadow-color: #466365;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-\[\#38302e\]:hover {
+  --tw-shadow-color: #38302e;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.hover\:shadow-\[\#a79ab2\]:hover {
+  --tw-shadow-color: #a79ab2;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .hover\:outline-none:hover {
   outline: 2px solid transparent;
   outline-offset: 2px;
