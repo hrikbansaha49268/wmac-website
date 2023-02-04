@@ -650,14 +650,14 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .my-2 {
@@ -718,6 +718,10 @@ video {
   margin-top: 3rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .-mt-12 {
   margin-top: -3rem;
 }
@@ -760,10 +764,6 @@ video {
 
 .mb-5 {
   margin-bottom: 1.25rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .mb-32 {
@@ -822,6 +822,10 @@ video {
   height: 7rem;
 }
 
+.h-1 {
+  height: 0.25rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -858,6 +862,10 @@ video {
   width: 6rem;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -892,6 +900,10 @@ video {
 
 .basis-auto {
   flex-basis: auto;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer {
@@ -1003,6 +1015,10 @@ video {
 
 .border-0 {
   border-width: 0px;
+}
+
+.border-4 {
+  border-width: 4px;
 }
 
 .border-2 {
@@ -1461,11 +1477,6 @@ video {
   fill: #4267B2;
 }
 
-.hover\:text-blue-600:hover {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -1495,6 +1506,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.hover\:shadow-\[\#B9F3FC\]:hover {
+  --tw-shadow-color: #B9F3FC;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .hover\:shadow-\[\#a78a7f\]:hover {
   --tw-shadow-color: #a78a7f;
   --tw-shadow: var(--tw-shadow-colored);
@@ -1510,6 +1526,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.hover\:shadow-\[\#645CBB\]:hover {
+  --tw-shadow-color: #645CBB;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .hover\:shadow-\[\#00d9c0\]:hover {
   --tw-shadow-color: #00d9c0;
   --tw-shadow: var(--tw-shadow-colored);
@@ -1517,11 +1538,6 @@ video {
 
 .hover\:shadow-\[\#466365\]:hover {
   --tw-shadow-color: #466365;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-\[\#7c6c77\]:hover {
-  --tw-shadow-color: #7c6c77;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1722,6 +1738,10 @@ video {
     margin-bottom: 0px;
   }
 
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
   .md\:mr-6 {
     margin-right: 1.5rem;
   }
@@ -1884,6 +1904,10 @@ video {
   .lg\:mx-\[11\.25vw\] {
     margin-left: 11.25vw;
     margin-right: 11.25vw;
+  }
+
+  .lg\:mb-32 {
+    margin-bottom: 8rem;
   }
 
   .lg\:mb-10 {
