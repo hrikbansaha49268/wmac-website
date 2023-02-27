@@ -14,12 +14,29 @@
                     WMAC India is affiliated to Nehru Yuva Kendra Sangathan, Ministry of Youth Affairs and Sports,
                     Government of India.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <link rel="stylesheet" href="output.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com/3.2.4"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                fontFamily: {
+                    sans: ["Roboto", "sans-serif"],
+                    body: ["Roboto", "sans-serif"],
+                    mono: ["ui-monospace", "monospace"],
+                },
+            },
+            corePlugins: {
+                preflight: false,
+            },
+        };
+    </script>
     <title>WMAC-India | Home</title>
 </head>
 
-<body class="bg-gray-200">
+<body class="bg-gray-200" data-theme="dark">
 
     <div class="my-18 text-gray-800 text-center lg:text-left background-radial-gradient">
         <!-- Navbar -->
@@ -113,7 +130,7 @@
     </div>
 
     <!-- Written Content -->
-    <div class="mt-11 mb-24 container mx-auto lg:px-4">
+    <div class="mt-11 mb-24 mx-auto lg:px-4">
         <div class="text-gray-700 flex flex-col items-center antialiased">
             <h1
                 class="hidden lg:block text-4xl lg:mb-10 mt-10 mb-5 font-black tracking-tight leading-none text-black md:text-5xl lg:text-6xl">
@@ -162,66 +179,86 @@
         class="lg:shadow-2xl hover:shadow-blue-100 rounded-xl bg-white my-24 pt-10 pb-2 px-6 lg:mx-[11.25vw] mx-[5.25vw]">
         <section class="mb-32 text-gray-800 text-center">
             <h2 class="text-3xl font-bold mb-12">Members</h2>
-            <div id="carouselExampleCaptions" class="carousel slide relative carousel-dark" data-bs-ride="carousel">
-                <div class="carousel-inner relative w-full overflow-hidden">
-                    <!-- Harald Folladori -->
-                    <div class="carousel-item active relative float-left w-full">
-                        <img class="rounded-full shadow-lg mb-6 mx-auto"
-                            src="./assets/members_photos/harald_folladori.jpg" alt="avatar"
-                            style="width: 150px; height: 150px; object-fit: cover; object-position: 25% 25%;" />
-                        <div class="flex flex-wrap justify-center">
-                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12">
-                                <h5 class="text-lg font-bold mb-3">Shri Harald Folladori</h5>
-                                <p class="font-medium text-gray-700 mb-4">WMAC World President</p>
+            <div id="carouselExampleIndicators" class="relative" data-te-carousel-init data-te-carousel-slide>
+                <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+                    <div class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                        data-te-carousel-item data-te-carousel-active>
+                        <!-- Harald Folladori -->
+                        <div class="carousel-item active relative float-left w-full">
+                            <img class="rounded-full shadow-lg mb-6 mx-auto"
+                                src="./assets/members_photos/harald_folladori.jpg" alt="avatar"
+                                style="width: 150px; height: 150px; object-fit: cover; object-position: 25% 25%;" />
+                            <div class="flex flex-wrap justify-center">
+                                <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 text-center">
+                                    <h5 class="text-lg font-bold mb-3">Shri Harald Folladori</h5>
+                                    <p class="font-medium text-gray-700 mb-4">WMAC World President</p>
+                                </div>
                             </div>
                         </div>
+                        <!-- Harald Folladori -->
                     </div>
-                    <!-- Harald Folladori -->
-                    <!-- Sidhharth Lama -->
-                    <div class="carousel-item relative float-left w-full">
-                        <img class="rounded-full shadow-lg mb-6 mx-auto"
-                            src="./assets/members_photos/siddharth_lama.jpg" alt="avatar" style="width: 150px" />
-                        <div class="flex flex-wrap justify-center">
-                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                <h5 class="text-lg font-bold mb-3">Shri Siddharth Lama</h5>
-                                <p class="font-medium text-gray-700 mb-4">WMAC-ASIA President</p>
+                    <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                        data-te-carousel-item>
+                        <!-- Sidhharth Lama -->
+                        <div class="carousel-item relative float-left w-full">
+                            <img class="rounded-full shadow-lg mb-6 mx-auto"
+                                src="./assets/members_photos/siddharth_lama.jpg" alt="avatar" style="width: 150px" />
+                            <div class="flex flex-wrap justify-center">
+                                <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3 text-center">
+                                    <h5 class="text-lg font-bold mb-3">Shri Siddharth Lama</h5>
+                                    <p class="font-medium text-gray-700 mb-4">WMAC-ASIA President</p>
+                                </div>
                             </div>
                         </div>
+                        <!-- Sidhharth Lama -->
                     </div>
-                    <!-- Sidhharth Lama -->
-                    <!-- Koustav Sarkar -->
-                    <div class="carousel-item relative float-left w-full">
-                        <img class="rounded-full shadow-lg mb-6 mx-auto"
-                            src="./assets/members_photos/sensei_kaustav_sarkar.jpg" alt="avatar"
-                            style="width: 150px; height: 150px; object-fit: cover; object-position: 25% 25%;" />
-                        <div class="flex flex-wrap justify-center">
-                            <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3">
-                                <h5 class="text-lg font-bold mb-3">Shihan Dai Koustav Sarkar</h5>
-                                <p class="font-medium text-gray-700 mb-4">WMAC-INDIA President</p>
+                    <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+                        data-te-carousel-item>
+                        <!-- Koustav Sarkar -->
+                        <div class="carousel-item relative float-left w-full">
+                            <img class="rounded-full shadow-lg mb-6 mx-auto"
+                                src="./assets/members_photos/sensei_kaustav_sarkar.jpg" alt="avatar"
+                                style="width: 150px; height: 150px; object-fit: cover; object-position: 25% 25%;" />
+                            <div class="flex flex-wrap justify-center">
+                                <div class="grow-0 shrink-0 basis-auto w-full lg:w-8/12 px-3 text-center">
+                                    <h5 class="text-lg font-bold mb-3">Shihan Dai Koustav Sarkar</h5>
+                                    <p class="font-medium text-gray-700 mb-4">WMAC-INDIA President</p>
+                                </div>
                             </div>
                         </div>
+                        <!-- Koustav Sarkar -->
                     </div>
-                    <!-- Koustav Sarkar -->
                 </div>
-                <div class="my-5">
-                    <button
-                        class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                        type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                        type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+                <button
+                    class="absolute top-0 bottom-0 left-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:no-underline hover:opacity-90 hover:outline-none focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                    type="button" data-te-target="#carouselExampleIndicators" data-te-slide="prev">
+                    <span class="inline-block h-8 w-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+                    </span>
+                    <span
+                        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+                </button>
+                <button
+                    class="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:no-underline hover:opacity-90 hover:outline-none  focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+                    type="button" data-te-target="#carouselExampleIndicators" data-te-slide="next">
+                    <span class="inline-block h-8 w-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="h-6 w-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </span>
+                    <span
+                        class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+                </button>
             </div>
         </section>
-        <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     </div>
     <!-- Members -->
+
+
 
     <!-- Footer -->
     <footer class="p-4 bg-white shadow md:px-6 md:py-8 dark:bg-gray-900">
