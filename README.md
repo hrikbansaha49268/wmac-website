@@ -6,4 +6,5 @@ This is a private repository.
 
 <ol>
 <li>Version 1.0.0 Uploaded on 10.11.2022</li>
+<li>Version 1.1.0 Uploaded on 23.06.2023</li>
 </ol>
