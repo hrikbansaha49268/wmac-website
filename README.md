@@ -8,4 +8,5 @@ This is a private repository.
 <li>Version 1.0.0 Uploaded on 10.11.2022</li>
 <li>Version 1.1.0 Uploaded on 23.06.2023</li>
 <li>Version 2.0.0 Uploaded on 02.07.2023</li>
+<li>Version 2.1.0 Uploaded on 06.07.2023</li>
 </ol>
