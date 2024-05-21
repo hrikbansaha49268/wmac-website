@@ -173,24 +173,36 @@
                         <h4 class="text-4xl font-bold mb-4">Shihan Dai Koustav Sarkar</h4>
                         <!-- <hr class="mx-auto w-[90%] h-1 rounded border-0 my-4 bg-gray-700"> -->
                         <p class="mt-4 font-semibold text-2xl">
-                            National Director, President
+                            National Director
                         </p>
                     </div>
                 </div>
             </div>
             <!-- Shihan Dai Kaustav Sarkar -->
 
+            <!-- Board of Administration -->
             <div class="my-24">
                 <hr class="my-24 mx-auto w-56 h-2 rounded border-0 md:my-10 bg-gray-700">
             </div>
 
             <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto my-10 py-5">
-                <h3 class="text-6xl font-extrabold tracking-wide mb-6 text-gray-800">Members</h3>
+                <h3 class="text-6xl font-extrabold tracking-wide mb-6 text-gray-800">Board of Administration</h3>
             </div>
 
-            <!-- Members -->
-            <div id="members" class="grid md:grid-cols-2 lg:grid-cols-3 gap-11 text-center"></div>
-            <!-- Members -->
+            <div id="board-adm" class="grid md:grid-cols-2 lg:grid-cols-3 gap-11 text-center"></div>
+            <!-- Board of Administration -->
+
+            <!-- Board of Trustees -->
+            <div class="my-24">
+                <hr class="my-24 mx-auto w-56 h-2 rounded border-0 md:my-10 bg-gray-700">
+            </div>
+
+            <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto my-10 py-5">
+                <h3 class="text-6xl font-extrabold tracking-wide mb-6 text-gray-800">Board of Trustees</h3>
+            </div>
+
+            <div id="board-trustees" class="grid md:grid-cols-2 lg:grid-cols-3 gap-11 text-center"></div>
+            <!-- Board of Trustees -->
 
         </section>
         <!-- Members Only -->
@@ -247,204 +259,6 @@
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
     <script>
-        const memList = [
-            // Sensei Anurag Sengupta
-            {
-                colorSchema: '#d1d0a3',
-                memName: 'Sensei Anurag Sengupta',
-                objPos: '25% 25%',
-                imgSrc: 'sensei_anurag_sengupta.jpg',
-                scaling: '',
-                objFit: 'cover',
-                role: `
-        <div class="font-semibold flex flex-col text-center">
-                        <p>Vice President</p>
-                        <p>ASsistant National Director</p>
-                    </div>
-        `
-            },
-            // Sensei Rohan Ganguly
-            {
-                colorSchema: '#a78a7f',
-                memName: 'Sensei Rohan Ganguly',
-                objPos: '20% 30px',
-                imgSrc: 'rohan_ganguly.jpeg',
-                scaling: 'scale:2.5',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-            Secretary General
-        </p>`
-            },
-            // Sensei Preet Kaur
-            {
-                colorSchema: '#ffe787',
-                memName: 'Sensei Preet Kaur',
-                objPos: '25% 20px',
-                imgSrc: 'sensei_preet_kaur.jpg',
-                scaling: 'scale:2.0',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Assistant Secretary General
-        </p>`
-            },
-            // Sensei Susneha Saha
-            {
-                colorSchema: '#aaa694',
-                memName: 'Sensei Susneha Saha',
-                objPos: '8px 10px',
-                imgSrc: 'sensei_susneha_saha.jpg',
-                scaling: 'scale: 1.2',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Cooperation
-        </p>`
-            },
-            // Sm. Patottri Mukherjee
-            {
-                colorSchema: '#9d789b',
-                memName: 'Sm. Patottri Mukherjee',
-                objPos: '-5px -35%',
-                imgSrc: 'patottri_mukherjee.JPG',
-                scaling: 'scale: 2.0',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Treasury
-        </p>`
-            },
-            // Shri Suyash Toshniwal
-            {
-                colorSchema: '#9d789b',
-                memName: 'Shri Suyash Toshniwal',
-                objPos: '25% 25%',
-                imgSrc: 'suyash_toshniwal.jpeg',
-                scaling: '',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Joint Secretary of the Treasury
-        </p>`
-            },
-            // Sensei Dipika Biswas
-            {
-                colorSchema: '#645CBB',
-                memName: 'Sensei Dipika Biswas',
-                objPos: '-2px -60%',
-                imgSrc: 'dipika_biswas.jpeg',
-                scaling: 'scale:5.0',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Events
-        </p>`
-            },
-            // Sensei Mainak Biswas
-            {
-                colorSchema: '#38302e',
-                memName: 'Sensei Mainak Biswas',
-                objPos: '25% 25%',
-                imgSrc: 'mainak_biswas.JPG',
-                scaling: 'scale:2.2',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Admissions
-        </p>`
-            },
-            // Sensei Shreya Das
-            {
-                colorSchema: '#00d9c0',
-                memName: 'Sensei Shreya Das',
-                objPos: '0 380%',
-                imgSrc: 'shreya_das.jpg',
-                scaling: 'scale:3.5',
-                objFit: 'contain',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Inter–Sports Development
-        </p>`
-            },
-            // Sensei Abhinava Mandal
-            {
-                colorSchema: '#B9F3FC',
-                memName: 'Sensei Abhinava Mandal',
-                objPos: '-7px 60%',
-                imgSrc: 'abinava_mandal.JPG',
-                scaling: 'scale:3.8',
-                objFit: 'scale-down',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Communications
-        </p>`
-            },
-            // Shri Amarendra Das
-            {
-                colorSchema: '#466365',
-                memName: 'Shri Amarendra Das',
-                objPos: '75% -4px',
-                imgSrc: 'amarendra_das.jpg',
-                scaling: 'scale:7.0',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Social Projects
-        </p>`
-            },
-            // Shri Saptak Sarkar
-            {
-                colorSchema: '#0a75a7',
-                memName: 'Shri Saptak Sarkar',
-                objPos: '2px 20px',
-                imgSrc: 'saptak_sarkar.jpeg',
-                scaling: 'scale:2.0',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Administration
-        </p>`
-            },
-            // Sm Anushua Gayen
-            {
-                colorSchema: '#9d789b',
-                memName: 'Sm Anushua Gayen',
-                objPos: '45%',
-                imgSrc: 'anushua_gayen.jpeg',
-                scaling: 'scale:4.0',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Public Relations
-        </p>`
-            },
-            // Shri Rupam Das
-            {
-                colorSchema: '#a79ab2',
-                memName: 'Shri Rupam Das',
-                objPos: '25% 25%',
-                imgSrc: 'shri_rupam_das.jpg',
-                scaling: '',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Secretary of Content Creation
-        </p>`
-            },
-            // Shri Shrayam Golui
-            {
-                colorSchema: '#69a2b0',
-                memName: 'Shri Shrayam Golui',
-                objPos: '60% 35%',
-                imgSrc: 'shrayam_golui.jpg',
-                scaling: 'scale:5.0',
-                objFit: 'scale-down',
-                role: `<p class="mt-4 font-semibold">
-            Secretary of Medical Affairs & Anti-Doping
-        </p>`
-            },
-            // Sm Aishwarya Saha
-            {
-                colorSchema: '#213363',
-                memName: 'Sm Aishwarya Saha',
-                objPos: '55% 3px',
-                imgSrc: 'aishwariya_saha.jpeg',
-                scaling: 'scale:2.8',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-            Secretary of Interns
-        </p>`
-            }
-        ];
-
         const component = (elem) => `<div class="block rounded-lg shadow-2xl lg:hover:shadow-gray-500 lg:hover:scale-105 cursor-pointer bg-white duration-300 ease-in-out">
                 <div class="overflow-hidden rounded-t-lg h-28" style="background-color:${elem.colorSchema};"></div>
                 <div class="w-24 -mt-12 overflow-hidden border-2 border-white rounded-full mx-auto bg-white">
@@ -459,12 +273,97 @@
             </div>
         `;
 
-        for (let i = 0; i < memList.length; i++) {
+        const admList = [
+            // Sensei Dipika Biswas
+            {
+                colorSchema: '#645CBB',
+                memName: 'Sensei Dipika Biswas',
+                objPos: '-2px -60%',
+                imgSrc: 'dipika_biswas.jpeg',
+                scaling: 'scale: 5.0',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           President
+        </p>`
+            },
+            // Sensei Mainak Biswas
+            {
+                colorSchema: '#38302e',
+                memName: 'Sensei Mainak Biswas',
+                objPos: '25% 25%',
+                imgSrc: 'mainak_biswas.JPG',
+                scaling: 'scale: 2.2',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           Administrative Secretary
+        </p>`
+            },
+        ];
+
+        const trusteesList = [
+            // Shihan Dai Koustav Sarkar
+            {
+                colorSchema: '#FFD700',
+                memName: 'Shihan Dai Koustav Sarkar',
+                objPos: '-8px 0',
+                imgSrc: 'koustav_sarkar.jpeg',
+                scaling: 'scale:2',
+                objFit: 'cover',
+                role: `
+        <p class="mt-4 font-semibold">
+            President
+        </p>
+        `
+            },
+            // Sensei Rohan Ganguly
+            {
+                colorSchema: '#a78a7f',
+                memName: 'Sensei Rohan Ganguly',
+                objPos: '20% 30px',
+                imgSrc: 'rohan_ganguly.jpeg',
+                scaling: 'scale:2.5',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+            Vice President
+        </p>`
+            },
+            // Sensei Dipika Biswas
+            {
+                colorSchema: '#645CBB',
+                memName: 'Sensei Dipika Biswas',
+                objPos: '-2px -60%',
+                imgSrc: 'dipika_biswas.jpeg',
+                scaling: 'scale:5.0',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           Treasurer
+        </p>`
+            },
+            // Sensei Mainak Biswas
+            {
+                colorSchema: '#38302e',
+                memName: 'Sensei Mainak Biswas',
+                objPos: '25% 25%',
+                imgSrc: 'mainak_biswas.JPG',
+                scaling: 'scale:2.2',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           Secretary General
+        </p>`
+            },
+        ];
+
+        for (let i = 0; i < admList.length; i++) {
             const memberElement = document.createElement('span');
-            memberElement.innerHTML = component(memList[i]);
-            document.getElementById('members').appendChild(memberElement);
+            memberElement.innerHTML = component(admList[i]);
+            document.getElementById('board-adm').appendChild(memberElement);
         };
 
+        for (let i = 0; i < trusteesList.length; i++) {
+            const memberElement = document.createElement('span');
+            memberElement.innerHTML = component(trusteesList[i]);
+            document.getElementById('board-trustees').appendChild(memberElement);
+        };
     </script>
 </body>
 
