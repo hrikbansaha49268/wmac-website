@@ -204,6 +204,18 @@
             <div id="board-trustees" class="grid md:grid-cols-2 lg:grid-cols-3 gap-11 text-center"></div>
             <!-- Board of Trustees -->
 
+            <!-- secretaries -->
+            <div class="my-24">
+                <hr class="my-24 mx-auto w-56 h-2 rounded border-0 md:my-10 bg-gray-700">
+            </div>
+
+            <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto my-10 py-5">
+                <h3 class="text-6xl font-extrabold tracking-wide mb-6 text-gray-800">Secretaries</h3>
+            </div>
+
+            <div id="secretaries" class="grid md:grid-cols-2 lg:grid-cols-3 gap-11 text-center"></div>
+            <!-- secretaries -->
+
         </section>
         <!-- Members Only -->
     </main>
@@ -259,7 +271,7 @@
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
 
     <script>
-        
+
         const component = (elem) => `<div class="block rounded-lg shadow-2xl lg:hover:shadow-gray-500 lg:hover:scale-105 cursor-pointer bg-white duration-300 ease-in-out">
                 <div class="overflow-hidden rounded-t-lg h-28" style="background-color:${elem.colorSchema};"></div>
                 <div class="w-24 -mt-12 overflow-hidden border-2 border-white rounded-full mx-auto bg-white">
@@ -275,6 +287,20 @@
         `;
 
         const admList = [
+            // Shihan Dai Koustav Sarkar
+            {
+                colorSchema: '#FFD700',
+                memName: 'Shihan Dai Koustav Sarkar',
+                objPos: '-8px 0',
+                imgSrc: 'koustav_sarkar.jpeg',
+                scaling: 'scale:2',
+                objFit: 'cover',
+                role: `
+        <p class="mt-4 font-semibold">
+            National Director
+        </p>
+        `
+            },
             // Sensei Dipika Biswas
             {
                 colorSchema: '#645CBB',
@@ -286,19 +312,7 @@
                 role: `<p class="mt-4 font-semibold">
            President
         </p>`
-            },
-            // Sensei Mainak Biswas
-            {
-                colorSchema: '#38302e',
-                memName: 'Sensei Mainak Biswas',
-                objPos: '25% 25%',
-                imgSrc: 'mainak_biswas.JPG',
-                scaling: 'scale: 2.2',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Administrative Secretary
-        </p>`
-            },
+            }
         ];
 
         const trusteesList = [
@@ -354,6 +368,57 @@
             },
         ];
 
+        const secretariesList = [
+            // Khushboo Singh
+            {
+                colorSchema: '#ffd8be',
+                memName: 'Khushboo Singh',
+                objPos: '-3px -60%',
+                imgSrc: 'blank.jpg',
+                scaling: 'scale:1.5',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+          Internal Affairs
+        </p>`
+            },
+            // Sampurna Mukherjee
+            {
+                colorSchema: '#1282A2',
+                memName: 'Sampurna Mukherjee',
+                objPos: '-3px -60%',
+                imgSrc: 'blank.jpg',
+                scaling: 'scale:1.5',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           External Affairs
+        </p>`
+            },
+            // Sensei Mainak Biswas
+            {
+                colorSchema: '#38302e',
+                memName: 'Sensei Mainak Biswas',
+                objPos: '25% 25%',
+                imgSrc: 'mainak_biswas.JPG',
+                scaling: 'scale:2.2',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           Events & Projects
+        </p>`
+            },
+            // Suyash Toshniwal
+            {
+                colorSchema: '#0A1128',
+                memName: 'Suyash Toshniwal',
+                objPos: '0% 25%',
+                imgSrc: 'suyash_toshniwal.jpeg',
+                scaling: 'scale:1.2',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           Treasurer
+        </p>`
+            },
+        ];
+
         for (let i = 0; i < admList.length; i++) {
             const memberElement = document.createElement('span');
             memberElement.innerHTML = component(admList[i]);
@@ -364,6 +429,12 @@
             const memberElement = document.createElement('span');
             memberElement.innerHTML = component(trusteesList[i]);
             document.getElementById('board-trustees').appendChild(memberElement);
+        };
+
+        for (let i = 0; i < trusteesList.length; i++) {
+            const memberElement = document.createElement('span');
+            memberElement.innerHTML = component(secretariesList[i]);
+            document.getElementById('secretaries').appendChild(memberElement);
         };
     </script>
 </body>
