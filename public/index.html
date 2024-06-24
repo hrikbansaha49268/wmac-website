@@ -80,9 +80,10 @@
             </div>
         </div>
     </nav>
-    <main class="md:container px-6 mx-auto">
-        <section class="md:h-[70vh] h-[50vh] md:my-16 my-8 overflow-hidden bg-white rounded-md">
-            <div id="default-carousel" class="relative md:h-full h-full w-full mx-auto shadow-lg" data-carousel="slide">
+    <main class="flex flex-col gap-y-4 my-8 md:container mx-auto md:px-0 px-4">
+        <section class="flex md:flex-row-reverse flex-col md:gap-y-0 gap-y-4">
+            <div id="default-carousel" class="relative md:h-[70vh] h-[50vh] md:w-2/3 w-full self-end md:ml-4"
+                data-carousel="slide">
                 <!-- Carousel wrapper -->
                 <div class="relative h-full overflow-hidden">
                     <!-- Item 1 -->
@@ -169,55 +170,39 @@
                 </button>
                 <!-- Slider controls -->
             </div>
-        </section>
-        <section
-            class="bg-white md:px-8 py-8 px-4 mx-auto rounded-md flex items-center w-full md:mb-16 mb-8 md:flex-row flex-col md:gap-y-0 gap-y-8">
-            <img class="rounded-lg shadow-lg object-scale-down h-full md:w-1/3 w-full"
-                src="./assets/national_director_profile/intro_profile_pic.jpg" alt="">
-            <div class="flex flex-col items-center gap-y-8 md:w-2/3 w-full">
-                <div class="w-full flex flex-col items-center gap-y-4 text-center px-4">
-                    <p class="md:text-7xl text-3xl font-black text-gray-700">Shri <span
-                            class="text-blue-600">Koustav</span>
-                        Sarkar
-                    </p>
-                    <div class="flex items-center gap-x-4">
-                        <p class="text-xl font-semibold">National Director of India</p>
-                        <a href="natdirsprof.html"
-                            class="rounded-full border text-gray-700 border-gray-700 p-1.5 hover:bg-gray-700 hover:text-white duration-300 ease-in-out active:scale-75">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
-                            </svg>
-                        </a>
-                    </div>
+            <div class="flex flex-col items-center relative md:h-[70vh] h-[50vh] md:w-1/3 w-full">
+                <img class="rounded-lg shadow-lg object-cover h-full w-full"
+                    src="./assets/national_director_profile/intro_profile_pic.jpg" alt="">
+                <div class="absolute z-10 w-full bottom-0 px-8 py-4 bg-black bg-opacity-50 rounded-b-lg">
+                    <p class="font-black text-4xl text-white">Shri Koustav Sarkar</p>
+                    <p class="font-semibold text-white">National Director of India</p>
                 </div>
-                <article class="font-medium text-gray flex flex-col gap-y-4 w-11/12">
-                    <p>
-                        World Martial Arts Committee – India is Official National Body of World Martial Arts
-                        Committee – WMAC (based at 25C Achgasse, Bregenz 6900, Austria). It's a legal non-
-                        profit Trust Organization registered under the Section 8 of the Indian Notaries Act of the
-                        Government of India. WMAC India is a Member Federation of the FIT India Movement -
-                        Ministry of Youth Affairs & Sports, Government of India. The Organization is also
-                        registered as an enterprise under the Ministry of MSME - Government of India.
-                    </p>
-                    <p>WMAC India is famously called the Defender of Faith for Martial Artists as we act as the
-                        Protector of Traditions for Martial Arts. Here, we promote Martial Arts for all by
-                        conducting training seminars, self-defence camps, tournaments and many other exiting
-                        projects that help steer the growth of Martial Arts as a Sport in the country.</p>
-                    <p>
-                        WMAC India is committed in the welfare of society apart from Martial Arts as well. We
-                        take up roles and activities like, human rights, women’s and children’s rights, environment
-                        safety, public health programmes and various other cultural and social projects. These
-                        projects are conducted both by our organization and also in collaboration with reputed
-                        Governmental and Non-Governmental organisations.
-                    </p>
-                    <p>
-                        We are the Ambassadors of both Sports & Social wellbeing for all every individual.
-                    </p>
-                </article>
             </div>
         </section>
+        <article class="font-medium text-gray flex flex-col gap-y-4 bg-white p-6 rounded-lg shadow-md">
+            <p>
+                World Martial Arts Committee – India is Official National Body of World Martial Arts
+                Committee – WMAC (based at 25C Achgasse, Bregenz 6900, Austria). It's a legal non-
+                profit Trust Organization registered under the Section 8 of the Indian Notaries Act of the
+                Government of India. WMAC India is a Member Federation of the FIT India Movement -
+                Ministry of Youth Affairs & Sports, Government of India. The Organization is also
+                registered as an enterprise under the Ministry of MSME - Government of India.
+            </p>
+            <p>WMAC India is famously called the Defender of Faith for Martial Artists as we act as the
+                Protector of Traditions for Martial Arts. Here, we promote Martial Arts for all by
+                conducting training seminars, self-defence camps, tournaments and many other exiting
+                projects that help steer the growth of Martial Arts as a Sport in the country.</p>
+            <p>
+                WMAC India is committed in the welfare of society apart from Martial Arts as well. We
+                take up roles and activities like, human rights, women’s and children’s rights, environment
+                safety, public health programmes and various other cultural and social projects. These
+                projects are conducted both by our organization and also in collaboration with reputed
+                Governmental and Non-Governmental organisations.
+            </p>
+            <p>
+                We are the Ambassadors of both Sports & Social wellbeing for all every individual.
+            </p>
+        </article>
     </main>
     <footer class="p-4 bg-white shadow md:px-6 md:py-8 dark:bg-gray-900">
         <div class="sm:flex sm:items-center sm:justify-between">
