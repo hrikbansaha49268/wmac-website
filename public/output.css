@@ -2168,6 +2168,10 @@ video {
     width: 33.333333%;
   }
 
+  .md\:w-96 {
+    width: 24rem;
+  }
+
   .md\:max-w-xl {
     max-width: 36rem;
   }
@@ -2463,6 +2467,10 @@ video {
 
   .lg\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .lg\:w-96 {
+    width: 24rem;
   }
 
   .lg\:max-w-3xl {
