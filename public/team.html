@@ -152,15 +152,15 @@
         </section>
         <!-- Patreons and Advisors -->
 
-        <div class="my-24">
+        <!-- <div class="my-24">
             <hr class="my-24 mx-auto w-56 h-2 rounded border-0 md:my-10 bg-gray-700">
-        </div>
+        </div> -->
 
         <!-- Members Only -->
         <section class="lg:my-20 lg:mx-44 m-5 md:m-10 text-gray-700">
 
             <!-- Shihan Dai Koustav Sarkar -->
-            <div class="flex flex-row justify-center">
+            <!-- <div class="flex flex-row justify-center">
                 <div
                     class="block rounded-lg shadow-2xl lg:hover:shadow-[#FFD700] cursor-pointer lg:w-[70%] md:w- bg-white">
                     <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #3185fc;"></div>
@@ -171,13 +171,12 @@
                     </div>
                     <div class="p-6 text-center">
                         <h4 class="text-4xl font-bold mb-4">Shihan Dai Koustav Sarkar</h4>
-                        <!-- <hr class="mx-auto w-[90%] h-1 rounded border-0 my-4 bg-gray-700"> -->
                         <p class="mt-4 font-semibold text-2xl">
                             National Director
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Shihan Dai Kaustav Sarkar -->
 
             <!-- Board of Administration -->
@@ -186,7 +185,8 @@
             </div>
 
             <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto my-10 py-5">
-                <h3 class="md:text-6xl text-4xl font-extrabold tracking-wide mb-6 text-gray-800">Board of Administration
+                <h3 class="md:text-6xl text-4xl font-extrabold tracking-wide mb-6 text-gray-800">
+                    Board of Administration
                 </h3>
             </div>
 
@@ -206,7 +206,7 @@
             <!-- Board of Trustees -->
 
             <!-- secretaries -->
-            <div class="my-24">
+            <!-- <div class="my-24">
                 <hr class="my-24 mx-auto w-56 h-2 rounded border-0 md:my-10 bg-gray-700">
             </div>
 
@@ -214,7 +214,7 @@
                 <h3 class="text-6xl font-extrabold tracking-wide mb-6 text-gray-800">Secretaries</h3>
             </div>
 
-            <div id="secretaries" class="grid md:grid-cols-2 lg:grid-cols-3 gap-11 text-center"></div>
+            <div id="secretaries" class="grid md:grid-cols-2 lg:grid-cols-3 gap-11 text-center"></div> -->
             <!-- secretaries -->
 
         </section>
@@ -273,7 +273,7 @@
 
     <script>
 
-        const component = (elem) => `<div class="block rounded-lg shadow-2xl lg:hover:shadow-gray-500 lg:hover:scale-105 cursor-pointer bg-white duration-300 ease-in-out">
+        const component = (elem) => `<div id="compo" class="w-96 block rounded-lg shadow-2xl lg:hover:shadow-gray-500 lg:hover:scale-105 cursor-pointer bg-white duration-300 ease-in-out">
                 <div class="overflow-hidden rounded-t-lg h-28" style="background-color:${elem.colorSchema};"></div>
                 <div class="w-24 -mt-12 overflow-hidden border-2 border-white rounded-full mx-auto bg-white">
                     <img src='./assets/members_photos/our_team/${elem.imgSrc}' loading="lazy"
@@ -287,21 +287,40 @@
             </div>
         `;
 
+        function listUiFormatter(reqList, containerDivId) {
+            const domElem = document.getElementById(containerDivId);
+            if (reqList.length > 1) {
+                for (let i = 0; i < reqList.length; i++) {
+                    const memberElement = document.createElement('span');
+                    memberElement.innerHTML = component(reqList[i]);
+                    domElem.appendChild(memberElement);
+                };
+            } else if (reqList.length === 1) {
+                const memberElement = document.createElement('span');
+                memberElement.innerHTML = component(reqList[0]);
+                domElem.classList.remove('grid');
+                domElem.classList.remove('md:grid-cols-2');
+                domElem.classList.remove('lg:grid-cols-3');
+                domElem.classList.add('justify-self-center');
+                domElem.appendChild(memberElement);
+            }
+        };
+
         const admList = [
             // Shihan Dai Koustav Sarkar
-            {
-                colorSchema: '#FFD700',
-                memName: 'Shihan Dai Koustav Sarkar',
-                objPos: '-8px 0',
-                imgSrc: 'koustav_sarkar.jpeg',
-                scaling: 'scale:2',
-                objFit: 'cover',
-                role: `
-        <p class="mt-4 font-semibold">
-            National Director
-        </p>
-        `
-            },
+            //     {
+            //         colorSchema: '#FFD700',
+            //         memName: 'Shihan Dai Koustav Sarkar',
+            //         objPos: '-8px 0',
+            //         imgSrc: 'koustav_sarkar.jpeg',
+            //         scaling: 'scale:2',
+            //         objFit: 'cover',
+            //         role: `
+            // <p class="mt-4 font-semibold">
+            //     National Director
+            // </p>
+            // `
+            //     },
             // Sensei Dipika Biswas
             {
                 colorSchema: '#645CBB',
@@ -343,18 +362,6 @@
             Vice President
         </p>`
             },
-            // Sensei Dipika Biswas
-            {
-                colorSchema: '#645CBB',
-                memName: 'Sensei Dipika Biswas',
-                objPos: '-2px -60%',
-                imgSrc: 'dipika_biswas.jpeg',
-                scaling: 'scale:5.0',
-                objFit: 'cover',
-                role: `<p class="mt-4 font-semibold">
-           Treasurer
-        </p>`
-            },
             // Sensei Mainak Biswas
             {
                 colorSchema: '#38302e',
@@ -367,6 +374,30 @@
            Secretary General
         </p>`
             },
+            // Sensei Dipika Biswas
+            {
+                colorSchema: '#645CBB',
+                memName: 'Sensei Dipika Biswas',
+                objPos: '-2px -60%',
+                imgSrc: 'dipika_biswas.jpeg',
+                scaling: 'scale:5.0',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           Treasurer
+        </p>`
+            },
+            // Sampurna Mukherjee
+            {
+                colorSchema: '#1282A2',
+                memName: 'Sampurna Mukherjee',
+                objPos: '-3px -60%',
+                imgSrc: 'blank.jpg',
+                scaling: 'scale:1.5',
+                objFit: 'cover',
+                role: `<p class="mt-4 font-semibold">
+           Assistant Secretary General
+        </p>`
+            }
         ];
 
         const secretariesList = [
@@ -420,23 +451,10 @@
             },
         ];
 
-        for (let i = 0; i < admList.length; i++) {
-            const memberElement = document.createElement('span');
-            memberElement.innerHTML = component(admList[i]);
-            document.getElementById('board-adm').appendChild(memberElement);
-        };
+        listUiFormatter(admList, 'board-adm');
+        listUiFormatter(trusteesList, 'board-trustees');
+        // listUiFormatter(secretariesList, 'secretaries');
 
-        for (let i = 0; i < trusteesList.length; i++) {
-            const memberElement = document.createElement('span');
-            memberElement.innerHTML = component(trusteesList[i]);
-            document.getElementById('board-trustees').appendChild(memberElement);
-        };
-
-        for (let i = 0; i < trusteesList.length; i++) {
-            const memberElement = document.createElement('span');
-            memberElement.innerHTML = component(secretariesList[i]);
-            document.getElementById('secretaries').appendChild(memberElement);
-        };
     </script>
 </body>
 

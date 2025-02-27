@@ -714,6 +714,11 @@ video {
   margin-bottom: 8vh;
 }
 
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -880,10 +885,6 @@ video {
   height: 16rem;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
 .w-6 {
   width: 1.5rem;
 }
@@ -928,8 +929,16 @@ video {
   width: 91.666667%;
 }
 
-.w-\[90\%\] {
-  width: 90%;
+.w-32 {
+  width: 8rem;
+}
+
+.w-52 {
+  width: 13rem;
+}
+
+.w-96 {
+  width: 24rem;
 }
 
 .max-w-sm {
@@ -1051,6 +1060,10 @@ video {
 
 .self-center {
   align-self: center;
+}
+
+.justify-self-center {
+  justify-self: center;
 }
 
 .overflow-hidden {
@@ -1221,38 +1234,8 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
-.bg-gradient-to-r {
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.bg-gradient-to-t {
-  background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
 .bg-gradient-to-tr {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-}
-
-.bg-gradient-to-br {
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-}
-
-.from-\[\#e7d16e\] {
-  --tw-gradient-from: #e7d16e;
-  --tw-gradient-to: rgb(231 209 110 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-black {
-  --tw-gradient-from: #000;
-  --tw-gradient-to: rgb(0 0 0 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-\[\#b17a3c\] {
-  --tw-gradient-from: #b17a3c;
-  --tw-gradient-to: rgb(177 122 60 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-\[\#54d3f8\] {
@@ -1261,12 +1244,10 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.to-\[\#c19536\] {
-  --tw-gradient-to: #c19536;
-}
-
-.to-\[\#\#003a9d\] {
-  --tw-gradient-to: ##003a9d;
+.from-\[\#b17a3c\] {
+  --tw-gradient-from: #b17a3c;
+  --tw-gradient-to: rgb(177 122 60 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-\[\#003a9d\] {
@@ -1408,6 +1389,16 @@ video {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .pr-4 {
@@ -1575,11 +1566,6 @@ video {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-\[\#323e4f\] {
-  --tw-text-opacity: 1;
-  color: rgb(50 62 79 / var(--tw-text-opacity));
 }
 
 .text-blue-400 {
@@ -2485,6 +2471,10 @@ video {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
