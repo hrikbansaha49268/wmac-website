@@ -120,6 +120,14 @@
     </header>
     <!-- Header -->
 
+    <!-- Election Notice -->
+    <!-- This notice will be shown until the election date -->
+    <div id="election-notice"
+        class="fixed top-24 left-1/2 transform -translate-x-1/2  px-6 py-3 rounded-xl shadow-md w-1/2 bg-gray-500 bg-opacity-50 text-center">
+        <p class="text-2xl font-bold">⚠️ Elections will be held on 20th July</p>
+    </div>
+    <!-- Election Notice -->
+
     <!-- About Section -->
     <main>
         <!-- Patreons and Advisors -->
@@ -134,10 +142,10 @@
             <!-- Prof Chiranjib Bhattacharya -->
             <div class="grid md:grid-cols-1 gap-3 lg:gap-12 text-center mt-12">
                 <div class="mb-12 md:mb-0">
-                    <div class="flex justify-center mb-6">
+                    <!-- <div class="flex justify-center mb-6">
                         <img src="./assets/members_photos/prof_chiranjib_bhattacharya.jpg"
                             class="rounded-full shadow-lg lg:w-[20rem] w-64" />
-                    </div>
+                    </div> -->
                     <h5 class="text-xl font-bold">Prof. (Dr.) Chiranjib Bhattacharjee</h5>
                     <div class="my-2">
                         <p class="font-medium text-base">
@@ -270,22 +278,34 @@
     </footer>
     <!-- Footer -->
     <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
-
     <script>
 
-        const component = (elem) => `<div id="compo" class="md:w-96 lg:w-96 block rounded-lg shadow-2xl lg:hover:shadow-gray-500 lg:hover:scale-105 cursor-pointer bg-white duration-300 ease-in-out">
+        function toggleElectionNotice() {
+            const targetDate = new Date("2025-07-20");
+            const presentDate = new Date();
+            const match = targetDate.toDateString() === presentDate.toDateString();
+            const notice = document.getElementById('election-notice');
+            if (match) {
+                notice.classList.add('hidden');
+            } else {
+                notice.classList.remove('hidden');
+            }
+        }
+
+        function component(elem) {
+            return `<div id="compo" class="md:w-96 lg:w-96 block rounded-lg shadow-2xl lg:hover:shadow-gray-500 lg:hover:scale-105 cursor-pointer bg-white duration-300 ease-in-out">
                 <div class="overflow-hidden rounded-t-lg h-28" style="background-color:${elem.colorSchema};"></div>
-                <div class="w-24 -mt-12 overflow-hidden border-2 border-white rounded-full mx-auto bg-white">
+                 ${elem.imgSrc === "koustav_sarkar.jpeg" ? `<div class="w-24 -mt-12 overflow-hidden border-2 border-white rounded-full mx-auto bg-white">
                     <img src='./assets/members_photos/our_team/${elem.imgSrc}' loading="lazy"
                         style="width: 100px; height: 100px; object-fit: ${elem.objFit}; object-position:${elem.objPos}; ${elem.scaling}" />
-                </div>
+                    </div>` : ''}
                 <div class="p-6">
                     <h4 class="text-2xl font-bold">${elem.memName}</h4>
                     <hr class="my-2" />
                     ${elem.role}
                 </div>
             </div>
-        `;
+        `};
 
         function listUiFormatter(reqList, containerDivId) {
             const domElem = document.getElementById(containerDivId);
@@ -454,6 +474,8 @@
         // listUiFormatter(admList, 'board-adm');
         listUiFormatter(trusteesList, 'board-trustees');
         // listUiFormatter(secretariesList, 'secretaries');
+
+        toggleElectionNotice();
 
     </script>
 </body>
